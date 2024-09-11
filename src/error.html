@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <link rel="icon" href="/favicon.png" />
+        <link type="text/css" rel="stylesheet" href="/global.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>%sveltekit.error.message%</title>
+        <style>
+            .error{
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            .error{
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            p{
+                text-align: center;
+                display: flex;
+                margin: 0 auto;
+            }
+            button{
+                padding: 12px;
+                text-align: center;
+                background: yellow;
+                border-radius: 6px;
+                min-width: 130px;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            const go_back=()=>{
+                history.back()
+            }
+        </script>
+	</head>
+	<body>
+        <div class="error">
+            <h1>My custom error page</h1>
+            <p>Status: %sveltekit.status%</p>
+            <p>Message: %sveltekit.error.message%</p><br><br>
+
+            <p>
+                <button onclick="go_back()">Go Back</button>
+                <a href='/guides'>View all Guides</a>
+            </p>
+
+        </div>
+	</body>
+</html>
